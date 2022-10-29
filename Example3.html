@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function display(form) {
+            var id = form.sid.value
+            var msg = form.sname.value;
+            if (id == "" || msg == "") {
+                alert("Your name or ID field is empty!");
+            } else {
+                alert("Your name is: " + msg + " and Your ID is: " + id);
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form action="" method="">
+        <!-- Text boxes -->
+        <p style="color:rgb(0, 102, 255); font-weight: 500; font-family: cursive;">Student Information Page</p>
+        <label for="sname">Name:</label>
+        <input type="text" id="sname" name="optional" placeholder="Enter your name here">
+        <br>
+        <br>
+        <label for="sid">ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <!-- Required ensures field is not left empty -->
+        <input type="number" id="sid" name="sid" placeholder="Enter your id here" required>
+
+        <!-- Radio button -->
+        <h3>Select your major</h3>
+        <input type="radio" name="major" value="cs" id="cs">
+        <label for="cs">CS</label> <br>
+        <input type="radio" name="major" value="bio" id="bio">
+        <label for="bio">Biology</label> <br>
+        <input type="radio" name="major" value="chem" id="chem">
+        <label for="chem">Chemistry</label> <br>
+
+        <!-- Checkboxes -->
+        <h3>Select your courses</h3>
+        <input type="checkbox" value="cs" id="cs">
+        <label for="cs">CS 101</label> <br>
+        <input type="checkbox" value="cs2" id="cs2">
+        <label for="cs2">CS 102</label> <br>
+        <input type="checkbox" value="bio" id="bio">
+        <label for="bio">BIO 101</label> <br>
+        <input type="checkbox" value="chem" id="chem">
+        <label for="chem">CHEM 101</label> <br>
+        <br>
+
+        <!-- Drop down list -->
+        <label for="course">Select your favorite course:</label>
+        <select name="course" id="course">
+            <option value="">...</option>
+            <option value="cs101">CS 101</option>
+            <option value="cs102">CS 102</option>
+            <option value="bio101">BIO 101</option>
+            <option value="chem101">CHEM 101</option>
+        </select>
+
+
+
+        <!-- Submit button -->
+        <br> <br>
+        <input type="reset" name="reset" id="reset">
+        <button onclick="display(this.form)">Submit</button>
+
+        <!-- <button>Submit</button> -->
+
+        <!-- Another way to make a button: -->
+        <!-- <input type="submit" name="submit" id="submit"> -->
+
+        <!-- Put action under form action to make buttons actually work -->
+        <!-- Methods can be used to get information -->
+
+
+
+</body>
+
+</html>

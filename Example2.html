@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-image: url(wallpaper.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        table,
+        tr,
+        td,
+        th {
+            border: 2px solid;
+            border-color: black;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+        
+        .university {
+            font-family: cursive;
+            color: blue;
+            padding: 5px;
+            border: 1px;
+        }
+        
+        #header {
+            font-size: larger;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color:blue;">Hello there</h1>
+    <a href="https://www.bradley.edu" target="_blank">Bradley University Website</a>
+    <p>2nd line <br> which is really long</p>
+    <hr>
+    <pre>
+        First line Here
+            Second line
+                Third line
+    </pre>
+
+    <p><i>I want to italicize this line</i></p>
+    <p><b>I want to bolden this line</b></p>
+    <p><b><i>I want to bolden and italicize this line</i></b></p>
+    <p><mark>I want to highlight this line</mark></p>
+    <marquee behavior="slide" direction="right">Test Line</marquee>
+    <p>I am writing <ins>Inserted</ins> <del>This line is deleted</del> text</p>
+
+    <p style="color:blueviolet; background-color:chartreuse; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Test line for styling</p>
+    <!-- Comment -->
+    <table>
+        <caption>Student Information</caption>
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>GPA</th>
+        </tr>
+        <tr>
+            <td>Mr x</td>
+            <td>900</td>
+            <td>4.0</td>
+        </tr>
+        <tr>
+            <td>Mr y</td>
+            <td>300</td>
+            <td>3.5</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>Student Information</caption>
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Emails</th>
+        </tr>
+        <tr>
+            <td>Mr Z</td>
+            <td>email1@gmail</td>
+            <td>email2@bradley</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>Student Information</caption>
+        <tr>
+            <th>Name</th>
+            <td>Mr Z</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Email</th>
+            <td>email1@gmail</td>
+        </tr>
+        <tr>
+            <td>email2@bradley</td>
+        </tr>
+    </table>
+
+    <div style="color: rgb(255, 255, 255); background-color: black;">
+        <p>Ordered List:</p>
+        <ol>
+            <li>
+                CIS/CS
+            </li>
+            <li>
+                Chemistry
+            </li>
+            <li>
+                Biology
+            </li>
+        </ol>
+
+        <p>Departments under LAS:</p>
+        <dl>
+            <dt>
+                CIS/CS
+                <dd>- Description for CIS/CS</dd>
+            </dt>
+            <dt>
+                Biology
+                <dd>- Description for Biology</dd>
+            </dt>
+            <dt>
+                Chemistry
+                <dd>- Description for Chemistry</dd>
+            </dt>
+        </dl>
+    </div>
+
+    <!-- Using tags with a class for custom properties-->
+    <p class="university">Bradley University</p>
+    <h3 class="university">University of Chicago</h3>
+    <h1 id="header">This is a header</h1>
+
+
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <p>Last line on the page</p>
+    <!--Sends you to the header-->
+    <a href="#header">Go to Top</a>
+</body>
+
+</html>

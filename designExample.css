@@ -1,0 +1,19 @@
+* {
+    color: red;
+    text-align: left;
+}
+
+h1,
+h2,
+h3 {
+    font-family: cursive;
+}
+
+div {
+    margin-top: 20px;
+}
+
+.university {
+    padding: 5px;
+    background-color: chocolate;
+}

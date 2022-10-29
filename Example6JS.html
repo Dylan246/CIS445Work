@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="pid">Student info will be displayed here</p>
+    <button onclick="fun()">Click here</button>
+
+    <script>
+        //Object example
+        const Student = {
+            Name: "Dylan",
+            SID: 1234,
+            GPA: 4.0
+        }
+        Student.Name = "Connor"
+        Student["GPA"] = "3.0" //Works just the same, but not used often
+        Student.Address = "Peoria" //Adds address to student object 
+
+        function fun() {
+            document.getElementById("pid").innerHTML = "Student Name: " + Student.Name +
+                " <br> <br> Student ID: " + Student.SID + " <br> <br> Student GPA: " + Student.GPA;
+        }
+
+        const Student2 = {}; //Declared and initialized
+        Student2.Name = "Dylan";
+        Student2.SID = 2312;
+        Student2.GPA = 4.0;
+
+        document.write("<br> <br>");
+        const Student3 = new Object(); //Empty object
+        Student3.Name = "Bill";
+        Student3.SID = 5432;
+        Student3.GPA = 2.5;
+        //Delete GPA
+        delete Student3.GPA;
+        for (p in Student3) {
+            document.write(Student3[p] + " ");
+        }
+
+        document.write("<br> <br>");
+
+        //Functions
+        function mul(x, y) {
+            return x * y;
+        }
+        document.write("Multiplication value = " + mul(3, 5));
+        document.write("<br> <br>");
+        document.write("Next multiplication value = " + mul(9, 5));
+        document.write("<br> <br>");
+
+        //Constructor function
+        function Studenta(Name, ID, GPA = 3.0) {
+            this.Name = Name;
+            this.ID = ID;
+            this.GPA = GPA;
+        }
+
+        const St1 = new Studenta("Bill", 1256, 3.5);
+        const St2 = new Studenta("Will", 1367, 3.8);
+        const St3 = new Studenta("Jill", 1367); //Excluding GPA, resorts to default value in constructor
+
+        for (p in St1) { //Print all info in first object
+            document.write(St1[p] + " ")
+        }
+    </script>
+</body>
+
+</html>
